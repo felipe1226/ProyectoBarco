@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_control"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.felipe.proyectobarco.Control"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.70">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="153dp"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="184dp"
+                android:layout_height="140dp"
+                app:srcCompat="@drawable/uceva"
+                android:id="@+id/imageView" />
+
+            <Button
+                android:text="Logout"
+                android:layout_width="110dp"
+                android:id="@+id/bSalir"
+                android:onClick="Salir"
+                android:layout_marginTop="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.70">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="251dp"
+                android:weightSum="1"
+                android:layout_marginLeft="25dp">
+
+                <ToggleButton
+                    android:text="ToggleButton"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bEncendido"
+                    android:layout_gravity="right"
+                    android:checked="true"
+                    android:onClick="Encendido"
+                    android:layout_width="90dp"
+                    android:textOff="Off"
+                    android:textOn="On" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/bFrenteIzquierda"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:onClick="FrenteIzquierda"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/fi" />
+
+                    <Button
+                        android:id="@+id/bFrente"
+                        android:textAlignment="center"
+                        android:onClick="Frente"
+                        android:layout_gravity="center"
+                        android:layout_width="60dp"
+                        android:layout_weight="0.00"
+                        android:layout_height="60dp"
+                        android:background="@drawable/f" />
+
+                    <Button
+                        android:id="@+id/bFrenteDerecha"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:onClick="FrenteDerecha"
+                        android:background="@drawable/fd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_height="60dp"
+                        android:id="@+id/bIzquierda"
+                        android:onClick="Izquierda"
+                        android:layout_width="60dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/i" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/bParar"
+                        android:onClick="Parar"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.00"
+                        android:background="@drawable/p" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/bDerecha"
+                        android:layout_weight="0.00"
+                        android:onClick="Derecha"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/d" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.33">
+
+                    <Button
+                        android:layout_height="60dp"
+                        android:layout_gravity="top|center"
+                        android:id="@+id/bAtras"
+                        android:onClick="Atras"
+                        android:layout_row="0"
+                        android:layout_column="11"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="95dp"
+                        android:layout_width="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/a" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
